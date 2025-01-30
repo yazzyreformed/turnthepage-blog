@@ -1,0 +1,16 @@
+
+<header>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="index.html" class="logo-link">
+                <h1>turnthepage</h1>
+            </a>
+        </div>
+        <div class="navbar-right">
+            <a href="index.html#home">Ana Sayfa</a>
+            <a href="index.html#categories">Kategoriler</a>
+            <a href="index.html#latest-comments">Son Tartışmalar</a>
+            <img src="/gorseller/ayarlar.webp" alt="Ayarlar" class="settings-icon" id="settings-icon">
+        </div>
+    </nav>
+</header>

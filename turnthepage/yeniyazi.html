@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yeni Yazı Ekle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 10px;
+        }
+
+        input, textarea, button {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Yeni Yazı Ekle</h1>
+    <form id="newPostForm">
+        <label for="postTitle">Başlık:</label>
+        <input type="text" id="postTitle" name="postTitle" required>
+
+        <label for="postContent">İçerik:</label>
+        <textarea id="postContent" name="postContent" required></textarea>
+
+        <button type="submit">Yazıyı Kaydet</button>
+    </form>
+
+    <script>
+        document.getElementById("newPostForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Kullanıcıdan alınan başlık ve içeriği konsola yazdırıyoruz (backend entegrasyonu için düzenlenebilir).
+            const title = document.getElementById("postTitle").value;
+            const content = document.getElementById("postContent").value;
+
+            console.log("Başlık:", title);
+            console.log("İçerik:", content);
+
+            // Yeni yazı başarıyla eklendiğinde kullanıcıyı ana sayfaya yönlendiriyoruz.
+            alert("Yeni yazınız başarıyla kaydedildi!");
+            window.location.href = "index.html"; // Ana sayfa ya da başka bir sayfaya yönlendirin.
+        });
+    </script>
+</body>
+</html>

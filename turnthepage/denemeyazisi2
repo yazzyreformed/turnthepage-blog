@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deneme Yazısı 2</title>
+    <link rel="stylesheet" href="css/StyleSheet2.css">
+    <script src="./JS/Script2.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <a href="deneme.html" class="logo-link">
+                    <h1>turnthepage</h1>
+                </a>
+            </div>
+            <div class="navbar-right">
+                <a href="#home">Ana Sayfa</a>
+                <a href="#categories">Kategoriler</a>
+                <a href="#latest-comments">Son Tartışmalar</a>
+                <img src="/gorseller/ayarlar.webp" alt="Ayarlar" class="settings-icon" id="settings-icon">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="center-section">
+            <h2 class="main-title">Deneme Yazısı 2</h2>
+            <p>Bu sayfa, "Deneme Yazısı 2" içeriğini göstermek için tasarlanmıştır. Burada yazı başlığı ve detaya inen metin bulunabilir.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 TurnThePage. Tüm hakları saklıdır.</p>
+    </footer>
+</body>
+</html>

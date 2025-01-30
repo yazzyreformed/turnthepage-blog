@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yeni Yazı Ekle</title>
+    <link rel="stylesheet" href="css/StyleSheet2.css">
+    <script src="./JS/Script2.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 160px); /* Navbar ve Footer boşluğunu hesaba kat */
+        }
+
+        form {
+            max-width: 500px;
+            width: 100%;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            background-color: #fff;
+            transition: border-color 0.3s;
+        }
+
+        form input:focus, form textarea:focus {
+            outline: none;
+            border-color: #007bff;
+            background-color: #fefefe;
+        }
+
+        form button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            float: right;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <a href="deneme.html" class="logo-link">
+                    <h1>turnthepage</h1>
+                </a>
+            </div>
+            <div class="navbar-right">
+                <a href="#home">Ana Sayfa</a>
+                <a href="#categories">Kategoriler</a>
+                <a href="#latest-comments">Son Tartışmalar</a>
+                <img src="/gorseller/ayarlar.webp" alt="Ayarlar" class="settings-icon" id="settings-icon">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="center-section">
+            <h2 class="main-title">Yeni Yazı Ekle</h2>
+            <form id="newPostForm">
+                <div class="form-group">
+                    <label for="postTitle">Başlık:</label>
+                    <input type="text" id="postTitle" name="postTitle" placeholder="Başlık giriniz" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="postContent">İçerik:</label>
+                    <textarea id="postContent" name="postContent" rows="5" placeholder="İçeriği buraya yazınız" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="username">Kullanıcı Adı:</label>
+                    <input type="text" id="username" name="username" placeholder="Adınızı giriniz" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-posta:</label>
+                    <input type="email" id="email" name="email" placeholder="E-posta adresinizi giriniz" required>
+                </div>
+
+                <button type="submit">Gönder</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 TurnThePage. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <script>
+        document.getElementById("newPostForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Kullanıcıdan alınan verileri alalım
+            const title = document.getElementById("postTitle").value;
+            const content = document.getElementById("postContent").value;
+            const username = document.getElementById("username").value;
+            const email = document.getElementById("email").value;
+
+            console.log("Başlık:", title);
+            console.log("İçerik:", content);
+            console.log("Kullanıcı Adı:", username);
+            console.log("E-posta:", email);
+
+            alert("Yeni yazınız başarıyla gönderildi!");
+            window.location.href = "deneme.html"; // Ana sayfaya yönlendirme
+        });
+    </script>
+</body>
+</html>

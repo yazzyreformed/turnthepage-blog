@@ -1,0 +1,27 @@
+/* Arama çubuğu için stil */
+#search-bar {
+    position: absolute; /* Header kısmında tam konumlandırma */
+    top: 20px; /* Yukarıdan mesafe */
+    left: 300px; /* Soldan mesafe */
+    display: flex; /* Çubuğu düzenli yerleştirme */
+    align-items: center;
+    gap: 5px; /* Çubuğun elemanları arasında boşluk */
+}
+
+#searchInput {
+    padding: 5px;
+    font-size: 14px;
+    width: 200px; /* Boyut küçültüldü */
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#searchButton {
+    padding: 5px 10px;
+    font-size: 14px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
